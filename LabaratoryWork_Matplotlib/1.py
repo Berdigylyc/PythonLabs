@@ -1,6 +1,6 @@
-import matplotlib.pyplot as plt
+  import matplotlib.pyplot as plt
 
-def read_points(file_path):
+def read(file_path):
     with open(file_path, 'r') as file:
         N = int(file.readline())  
         points = []
@@ -13,13 +13,12 @@ def plot_points(points):
     x, y = zip(*points)
     
     plt.scatter(x, y, color='blue', s=100)  
-    plt.title("Point Distribution")
-    plt.xlabel("X Coordinate")
-    plt.ylabel("Y Coordinate")
+    plt.title("feirverk")
+    plt.xlabel("X")
+    plt.ylabel("Y")
     plt.axis('equal')  
     plt.grid()  
     plt.show()  
 
 file_path = 'C:/Python/001.txt'
-points = read_points(file_path) 
-plot_points(points)  
+points = read(file_pa
