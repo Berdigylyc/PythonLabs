@@ -1,4 +1,4 @@
-  import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 def read(path):
     with open(path, 'r') as file:
@@ -9,7 +9,7 @@ def read(path):
             points.append(point)
     return points
 
-def plot_points(points): 
+def plot(points): 
     x, y = zip(*points)
     
     plt.scatter(x, y, color='blue', s=100)  
@@ -22,3 +22,4 @@ def plot_points(points):
 
 path = 'C:/Python/001.txt'
 points = read(path)
+plot(points)
