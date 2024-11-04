@@ -1,7 +1,7 @@
   import matplotlib.pyplot as plt
 
-def read(file_path):
-    with open(file_path, 'r') as file:
+def read(path):
+    with open(path, 'r') as file:
         N = int(file.readline())  
         points = []
         for _ in range(N):
@@ -20,5 +20,5 @@ def plot_points(points):
     plt.grid()  
     plt.show()  
 
-file_path = 'C:/Python/001.txt'
-points = read(file_pa
+path = 'C:/Python/001.txt'
+points = read(path)
