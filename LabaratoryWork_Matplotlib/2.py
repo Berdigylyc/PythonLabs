@@ -32,6 +32,6 @@ def plot(series):
         plt.show()
         plt.clf()
 
-path = 'C:/Python/series.txt'
+path = 'series.txt'
 series = read(path)
 plot(series)
