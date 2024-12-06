@@ -10,9 +10,9 @@ initial_state = np.array([
     0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
 
 n = len(initial_state)
-
-A = np.eye(n)
-A = A + np.roll(np.eye(n), -1, axis=0)
+A = np.zeros((n, n))
+np.fill_diagonal(A, 1)
+A[np.arange(1, n) % n, np.arange(n-1)] = -1
 
 k = 255
 u = initial_state.copy()
