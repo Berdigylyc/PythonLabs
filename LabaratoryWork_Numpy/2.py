@@ -8,9 +8,8 @@ def read_data(file_path):
     return data
 
 def getting_average(data, step):
-    averaged_data = np.copy(data)
-    for i in range(1, len(data)):
-        averaged_data[i] = np.mean(data[max(0, i - step + 1):i + 1])
+    im_step = np.ones(step) / step
+    averaged_data = np.convolve(data, im_step, mode='same')
     return averaged_data
 
 def plot_data(original_data, averaged_data, title="Original and averaged signal"):
