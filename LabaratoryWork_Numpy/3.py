@@ -11,10 +11,8 @@ initial_state = np.array([
 
 n = len(initial_state)
 
-A = np.zeros((n, n))
-for i in range(n):
-    A[i, i] = 1
-    A[(i + 1)%n , i] = -1
+A = np.eye(n)
+A = A + np.roll(np.eye(n), -1, axis=0)
 
 k = 255
 u = initial_state.copy()
